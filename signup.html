@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richfield Connect - Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">Richfield Connect</div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="signup.html" class="active">Sign Up</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="feed.html">Feed</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main class="container signup-layout">
+        
+        <section class="form-section">
+            <h2>Create an Account</h2>
+            <form id="registrationForm" novalidate>
+                
+                <div class="input-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" placeholder="Enter your full name">
+                    <span class="error-message" id="nameError"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="studentNumber">Student Number</label>
+                    <input type="text" id="studentNumber" placeholder="e.g. 202612345">
+                    <span class="error-message" id="studentError"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="campus">Campus / DL</label>
+                    <select id="campus">
+                        <option value="">Select your campus</option>
+                        <option value="Durban">Durban</option>
+                        <option value="Johannesburg">Johannesburg</option>
+                        <option value="Pretoria">Pretoria</option>
+                        <option value="Distance Learning">Distance Learning (DL)</option>
+                    </select>
+                    <span class="error-message" id="campusError"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="student@richfield.ac.za">
+                    <span class="error-message" id="emailError"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password (Min 8 characters)</label>
+                    <input type="password" id="password" placeholder="Create a secure password">
+                    <span class="error-message" id="passwordError"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" placeholder="Repeat your password">
+                    <span class="error-message" id="confirmPasswordError"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="interests">Interests (Comma separated)</label>
+                    <input type="text" id="interests" placeholder="e.g. Coding, Coding, Football, Gaming">
+                    <span class="error-message" id="interestsError"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="bio">Short Bio</label>
+                    <textarea id="bio" rows="3" placeholder="Tell us about yourself..."></textarea>
+                    <span class="error-message" id="bioError"></span>
+                </div>
+
+                <button type="submit" class="btn btn-block">Register Account</button>
+            </form>
+        </section>
+
+        <section class="preview-section">
+            <div class="preview-card">
+                <div class="preview-header">
+                    <h3>Live Profile Preview</h3>
+                </div>
+                <div class="preview-body">
+                    <h2 id="previewName">Your Name Will Appear Here</h2>
+                    <p class="preview-meta"><strong>Student ID:</strong> <span id="previewStudent">-</span></p>
+                    <p class="preview-meta"><strong>Campus:</strong> <span id="previewCampus">-</span></p>
+                    <p class="preview-meta"><strong>Email:</strong> <span id="previewEmail">-</span></p>
+                    
+                    <h4>Bio</h4>
+                    <p id="previewBio" class="bio-text">Your bio description will instantly render here as you type...</p>
+                    
+                    <h4>Interests</h4>
+                    <div id="previewTags" class="tags-container">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>&copy; 2026 Richfield Graduate Institute of Technology</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="signup.js"></script>
+</body>
+</html>
